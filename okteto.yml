@@ -1,8 +1,9 @@
 name: blog
-image:
-  name: okteto.dev/blog
-  context: .
-  dockerfile: Dockerfile
+image: okteto/node:12
+command: bash
 sync:
-  - .:/src
-command: ["bash"]
+- .:/usr/src/app
+resources:
+  limits:
+    cpu: "1"
+    memory: 2Gi
