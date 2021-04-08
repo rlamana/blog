@@ -1,0 +1,8 @@
+name: blog
+image:
+  name: okteto.dev/blog
+  context: .
+  dockerfile: Dockerfile
+sync:
+  - .:/src
+command: ["bash"]

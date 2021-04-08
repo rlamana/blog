@@ -1,0 +1,8 @@
+name: blog
+services:
+  blog:
+    public: true
+    image: okteto.dev/blog
+    build: .
+    ports:
+      - 80
